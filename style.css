@@ -392,17 +392,6 @@ textarea#sql-input { min-height: 190px; color: #e8f4e7; caret-color: var(--accen
 .auth-panel { position: relative; }
 #auth-close { position: absolute; top: 18px; right: 18px; display: grid; place-items: center; width: 34px; height: 34px; padding: 0; font-size: 21px; line-height: 1; }
 .auth-form button[type="submit"] { background: #23442a; color: #f3f9ec; }
-.admin-panel { margin: 32px 0; padding: clamp(22px, 3vw, 34px); }
-.admin-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
-.admin-toolbar h2 { margin: 4px 0 10px; color: #25402d; font-size: 24px; }
-.admin-users { display: grid; gap: 8px; margin-top: 18px; }
-.admin-user-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 14px; border: 1px solid #e3eadf; border-radius: 12px; background: #fbfcf9; }
-.admin-user-row > div { display: grid; gap: 4px; min-width: 0; }
-.admin-user-row strong { overflow-wrap: anywhere; color: #304d35; font-size: 13px; }
-.admin-user-row small { color: #758575; font-size: 11px; }
-.admin-access-button { flex: none; padding: 8px 12px; border: 1px solid #d5e4ce; border-radius: 9px; background: #f3f8ee; color: #3f6c3e; font-size: 12px; font-weight: 700; cursor: pointer; }
-.admin-access-button:hover { background: #e7f1df; }
-@media (max-width: 520px) { .admin-user-row { align-items: flex-start; flex-direction: column; } }
 @media (max-width: 800px) {
   .pricing-card { align-items: flex-start; flex-direction: column; }
   .pricing-card > div:last-child { width: min(100%, 300px); }
@@ -419,4 +408,36 @@ textarea#sql-input { min-height: 190px; color: #e8f4e7; caret-color: var(--accen
   .pricing-card { gap: 16px; margin: 23px 0 30px; }
   .pricing-card > div:last-child strong { font-size: 27px; }
   .access-notice { padding: 23px 20px; }
+}
+
+/* Administrator area uses the same visual language as the learner dashboard. */
+.admin-panel { padding: clamp(22px, 3vw, 34px); margin: 34px 0; }
+.admin-panel > p { color: #607467; line-height: 1.6; }
+.admin-panel #admin-status { min-height: 20px; color: #49713e; font-size: 13px; }
+.admin-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+.admin-toolbar h2 { margin: 3px 0 0; color: #203b2a; font-size: clamp(23px, 2.1vw, 30px); letter-spacing: -.04em; }
+.admin-users { display: grid; gap: 8px; margin-top: 21px; }
+.admin-user-row { display: flex; align-items: center; justify-content: space-between; gap: 15px; min-height: 68px; padding: 12px 15px; border: 1px solid #e0e9dc; border-radius: 11px; background: #fafcf8; }
+.admin-user-row > div { min-width: 0; }
+.admin-user-row strong { display: block; color: #294433; font-size: 14px; overflow-wrap: anywhere; }
+.admin-user-row small { display: block; margin-top: 3px; color: #728674; font-size: 12px; }
+.admin-access-button { flex: none; border: 1px solid #bdd5af; border-radius: 8px; background: #eef6e9; color: #38683a; padding: 9px 12px; font-size: 12px; font-weight: 750; }
+.admin-access-button:hover { background: #dff0d5; border-color: #a4c997; }
+.admin-access-button:disabled { opacity: .55; cursor: wait; }
+@media (max-width: 680px) {
+  .admin-panel { margin: 25px 0; }
+  .admin-user-row { align-items: flex-start; flex-direction: column; }
+  .admin-access-button { width: 100%; }
+}
+@media (max-width: 680px) {
+  .sidebar .lesson-list:has(.stage-group) {
+    display: block;
+    max-height: 235px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-right: 4px;
+    scrollbar-color: #6c8a6e #263a2c;
+  }
+  .sidebar .stage-lessons { max-height: none; overflow: visible; }
+  .sidebar .stage-group { margin-bottom: 3px; }
 }
