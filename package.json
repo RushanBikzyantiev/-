@@ -1,0 +1,17 @@
+{
+  "name": "zapros-sql-course",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1"
+  },
+  "dependencies": {
+    "@electric-sql/pglite": "^0.5.16",
+    "@supabase/supabase-js": "^2.87.1"
+  },
+  "devDependencies": {
+    "vite": "^7.2.2"
+  }
+}

@@ -1,14 +1,14 @@
-/** Real SQLite execution in a disposable worker. Nothing is sent to a server. */
+/** Real PostgreSQL execution in a disposable PGlite worker. Nothing is sent to a server. */
 export async function createEngine(schemaSql) {
   if (typeof schemaSql !== 'string' || !schemaSql.trim()) throw new Error('Учебная база не настроена.');
 
   function execute(query, solution = null) {
     return new Promise((resolve, reject) => {
-      const worker = new Worker(new URL('./engine-worker.js', import.meta.url));
+      const worker = new Worker(new URL('./engine-worker.js', import.meta.url), { type: 'module' });
       const timer = setTimeout(() => {
         worker.terminate();
         reject(new Error('Запрос выполнялся слишком долго. Попробуйте упростить его.'));
-      }, 5000);
+      }, 20000);
       const finish = () => { clearTimeout(timer); worker.terminate(); };
       worker.onmessage = ({ data }) => {
         finish();
@@ -26,6 +26,8 @@ export async function createEngine(schemaSql) {
   function rowKey(row) {
     return JSON.stringify(row.map(value => {
       if (value instanceof Uint8Array) return { blob: Array.from(value) };
+        if (typeof value === 'bigint') return value.toString();
+        if (value instanceof Date) return value.toISOString();
       return value;
     }));
   }
