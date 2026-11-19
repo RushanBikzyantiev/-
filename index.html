@@ -4,9 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#172522">
-  <meta name="description" content="Практический тренажёр SQL для начинающих аналитиков. Учитесь на задачах интернет-магазина.">
-  <title>Запрос — практика SQL для аналитиков</title>
-  <link rel="stylesheet" href="./style.css">
+  <meta name="description" content="Полный практический курс PostgreSQL: от первого SELECT до оконных функций, аналитики и оптимизации запросов.">
+  <title>Запрос — профессиональный курс PostgreSQL</title>
+  <script type="module" crossorigin src="./assets/index-DmAwPUbb.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-DEYW25ji.css">
 </head>
 <body>
   <div class="app-shell">
@@ -17,7 +18,7 @@
       </a>
       <div class="course-identity">
         <div class="course-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M4 7c0-1.66 3.58-3 8-3s8 1.34 8 3-3.58 3-8 3-8-1.34-8-3Z"/><path d="M4 7v5c0 1.66 3.58 3 8 3s8-1.34 8-3V7M4 12v5c0 1.66 3.58 3 8 3s8-1.34 8-3v-5"/></svg></div>
-        <div><span class="sidebar-eyebrow">ПРАКТИЧЕСКИЙ КУРС</span><strong>SQL для аналитика</strong></div>
+        <div><span class="sidebar-eyebrow">ПРАКТИЧЕСКИЙ КУРС</span><strong>PostgreSQL для аналитика</strong></div>
       </div>
       <div class="sidebar-divider"></div>
       <div class="side-heading"><span>ПРОГРАММА КУРСА</span><span class="side-heading-icon" aria-hidden="true">⌘</span></div>
@@ -25,28 +26,34 @@
       <div class="sidebar-footer">
         <div class="progress-label"><span>Ваш прогресс</span><strong id="progress-text">0 / 0</strong></div>
         <div class="progress-track" role="progressbar" aria-label="Прогресс курса" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progress-bar"><span></span></div>
-        <p>Прогресс сохраняется в этом браузере на вашем устройстве.</p>
+        <p id="progress-note">Прогресс сохраняется в этом браузере. После входа он синхронизируется с аккаунтом.</p>
       </div>
     </aside>
 
     <main class="main">
       <header class="topbar">
-        <div class="breadcrumbs"><span>Курсы</span><span class="crumb-separator">/</span><strong>SQL для аналитика</strong></div>
-        <div class="topbar-right"><span class="availability"><span></span> Ваше учебное пространство</span><span class="avatar" aria-hidden="true">Я</span></div>
+        <div class="breadcrumbs"><span>Курсы</span><span class="crumb-separator">/</span><strong>PostgreSQL для аналитика</strong></div>
+        <div class="topbar-right header-actions"><span class="availability"><span></span> Ваше учебное пространство</span><span id="account-label" class="account-menu">Гость</span><button id="auth-button" class="auth-button" type="button">Войти</button><button id="logout-button" class="auth-button" type="button" hidden>Выйти</button></div>
       </header>
 
       <div class="workspace">
         <section class="welcome" aria-label="О курсе">
-          <div class="welcome-copy"><div class="welcome-kicker"><span class="sparkle">✳</span> УЧИМСЯ НА ПРАКТИКЕ</div><h1>Каждый запрос —<br><em>шаг вперёд.</em></h1><p>Освойте SQL на практических задачах аналитика. Пишите запросы, исследуйте данные и находите ответы.</p><div class="welcome-meta"><span><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7"/><path d="M10 6v4l3 2"/></svg> В удобном темпе</span><span><svg viewBox="0 0 20 20" fill="none"><path d="m4 10 4 4 8-8"/></svg> Практика в браузере · SQLite</span></div></div>
+          <div class="welcome-copy"><div class="welcome-kicker"><span class="sparkle">✳</span> УЧИМСЯ НА ПРАКТИКЕ</div><h1>Каждый запрос —<br><em>шаг вперёд.</em></h1><p>Полный курс PostgreSQL: от основ до аналитических запросов. Пишите код, исследуйте данные и закрепляйте каждый навык на практике.</p><div class="welcome-meta"><span><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7"/><path d="M10 6v4l3 2"/></svg> 10 этапов · 54 задания</span><span><svg viewBox="0 0 20 20" fill="none"><path d="m4 10 4 4 8-8"/></svg> Настоящий PostgreSQL в браузере</span></div></div>
           <div class="welcome-art" aria-hidden="true"><div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div><div class="art-window"><div class="art-window-bar"><i></i><i></i><i></i><span>your_first_query.sql</span></div><div class="art-code"><div><b>SELECT</b> <span>curiosity,</span></div><div class="art-indent">skills,</div><div class="art-indent">confidence</div><div><b>FROM</b> <span>your_journey</span></div><div><b>WHERE</b> <span>you</span> = <em>'ready'</em>;</div></div></div><div class="art-star">✳</div><div class="art-cursor">✦</div></div>
         </section>
 
+        <section class="course-map" aria-labelledby="course-map-title"><div class="section-intro"><div><p class="eyebrow">МАРШРУТ ОБУЧЕНИЯ</p><h2 id="course-map-title">От SELECT до экспертных запросов</h2><p>Первый этап открыт всем. Остальные доступны после покупки полного курса.</p></div></div><div id="stage-map" class="stage-summary"></div></section>
+
+        <section id="pricing-card" class="pricing-card" aria-label="Полный доступ"><div><p class="eyebrow">ПОЛНЫЙ ДОСТУП</p><h2>Все этапы. Один платёж.</h2><p>Практический курс с заданиями и проверкой запросов. Доступ остаётся в вашем аккаунте.</p></div><div><strong>2 990 ₽</strong><button id="pay-button" class="pay-button" type="button">Открыть полный курс</button><span id="payment-status" role="status" aria-live="polite"></span></div></section>
+
         <div class="section-intro"><div><p class="eyebrow">ВАША СЛЕДУЮЩАЯ ЗАДАЧА</p><h2>Рабочее пространство</h2><p>Изучите условие и попробуйте написать запрос самостоятельно.</p></div><span class="lesson-count" id="lesson-counter">Урок</span></div>
 
-        <div class="learning-grid">
+        <section id="access-notice" class="access-notice" hidden aria-live="polite"><div class="stage-lock" aria-hidden="true">✧</div><p class="eyebrow">СЛЕДУЮЩИЙ ЭТАП</p><h2 id="locked-title">Урок доступен в полном курсе</h2><p id="locked-description">Откройте полный курс, чтобы продолжить обучение.</p><button id="locked-pay-button" class="pay-button" type="button">Открыть за 2 990 ₽</button></section>
+
+        <div class="learning-grid" id="learning-grid">
           <div class="left-column">
             <article class="card lesson-card" aria-labelledby="lesson-title">
-              <div class="card-top"><div class="topic-label"><span class="topic-dot"></span><span id="lesson-topic">ОСНОВЫ SQL</span></div><span class="level-pill">Начальный уровень</span></div>
+              <div class="card-top"><div class="topic-label"><span class="topic-dot"></span><span id="lesson-topic">ОСНОВЫ SQL</span></div><span class="level-pill" id="lesson-level">Начальный уровень</span></div>
               <h3 id="lesson-title">Загружаем урок…</h3>
               <p class="lesson-lead" id="lesson-description">Скоро здесь появится ваша первая задача.</p>
               <div class="lesson-separator"></div>
@@ -60,14 +67,15 @@
             <section class="card schema-card" aria-labelledby="schema-title"><div class="schema-head"><div><span class="schema-icon" aria-hidden="true">▦</span><h3 id="schema-title">Учебная база данных</h3></div><span class="schema-subtitle">Схема таблиц</span></div><div id="schema-content" class="schema-content"><p>Загружаем структуру базы…</p></div></section>
           </div>
           <div class="right-column">
-            <section class="editor-card" aria-labelledby="editor-title"><div class="editor-top"><div><span class="editor-symbol" aria-hidden="true">&lt;/&gt;</span><h3 id="editor-title">Редактор запроса</h3></div><span class="editor-dialect"><span></span> SQLite</span></div><div class="editor-tabs"><div class="editor-tab"><span class="tab-file">SQL</span> query.sql <span class="tab-close" aria-hidden="true">×</span></div><button type="button" class="reset-button" id="reset-button" title="Вернуть начальный запрос">Сбросить</button></div><div class="editor-area"><span class="line-number" aria-hidden="true">01</span><label for="sql-input" class="sr-only">Ваш SQL-запрос</label><textarea id="sql-input" spellcheck="false" autocomplete="off" autocapitalize="off" aria-describedby="editor-tip" placeholder="Напишите SQL-запрос здесь..."></textarea></div><div class="editor-bottom"><span id="editor-tip"><kbd>Ctrl</kbd> + <kbd>Enter</kbd> для запуска</span><button type="button" id="run-button" class="run-button"><span aria-hidden="true">▶</span> Выполнить запрос</button></div></section>
+            <section class="editor-card" aria-labelledby="editor-title"><div class="editor-top"><div><span class="editor-symbol" aria-hidden="true">&lt;/&gt;</span><h3 id="editor-title">Редактор запроса</h3></div><span class="editor-dialect"><span></span> PostgreSQL</span></div><div class="editor-tabs"><div class="editor-tab"><span class="tab-file">SQL</span> query.sql <span class="tab-close" aria-hidden="true">×</span></div><button type="button" class="reset-button" id="reset-button" title="Вернуть начальный запрос">Сбросить</button></div><div class="editor-area"><span class="line-number" aria-hidden="true">01</span><label for="sql-input" class="sr-only">Ваш SQL-запрос</label><textarea id="sql-input" spellcheck="false" autocomplete="off" autocapitalize="off" aria-describedby="editor-tip" placeholder="Напишите SQL-запрос здесь..."></textarea></div><div class="editor-bottom"><span id="editor-tip"><kbd>Ctrl</kbd> + <kbd>Enter</kbd> для запуска</span><button type="button" id="run-button" class="run-button"><span aria-hidden="true">▶</span> Выполнить запрос</button></div></section>
             <section class="card results-card" aria-labelledby="results-title"><div class="results-header"><div><span class="result-icon" aria-hidden="true">▤</span><h3 id="results-title">Результат</h3></div><span class="result-badge">ВЫВОД ЗАПРОСА</span></div><div id="result-status" class="result-status" role="status" aria-live="polite"></div><div id="result-empty" class="result-empty"><div class="empty-icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><rect x="5" y="6" width="22" height="20" rx="3"/><path d="M5 12h22M13 12v14M19 12v14M5 19h22"/></svg></div><strong>Здесь появится результат</strong><p>Напишите запрос и нажмите «Выполнить запрос», чтобы увидеть данные.</p></div><div id="result-table" class="table-wrap"></div><div class="result-footer"><span>Ваш запрос. Ваше открытие.</span><button type="button" id="next-button" class="next-button" hidden>Следующий урок <span aria-hidden="true">›</span></button></div></section>
           </div>
         </div>
+        <section id="admin-panel" class="card admin-panel" hidden aria-label="Панель администратора"><div class="admin-toolbar"><div><p class="eyebrow">УПРАВЛЕНИЕ КУРСОМ</p><h2>Пользователи и доступ</h2></div><button id="admin-refresh" class="auth-button" type="button">Обновить</button></div><p>Администратор видит все уроки и может выдавать или отзывать вручную предоставленный доступ.</p><p id="admin-status" role="status" aria-live="polite"></p><div id="admin-users" class="admin-users"></div></section>
         <footer class="page-footer"><span>© Запрос. Практика, которая работает.</span><span>Сделано с любопытством <span class="footer-heart">✳</span></span></footer>
       </div>
     </main>
   </div>
-  <script type="module" src="./app.js"></script>
+  <dialog id="auth-dialog" class="auth-dialog" aria-labelledby="auth-title"><div class="auth-panel"><button id="auth-close" class="auth-button" type="button" aria-label="Закрыть">×</button><p class="eyebrow">ВАШ АККАУНТ</p><h2 id="auth-title">Войти в курс</h2><p>Укажите почту. Мы отправим ссылку для входа, пароль не нужен.</p><form id="auth-form" class="auth-form"><label for="auth-email">Электронная почта</label><input id="auth-email" type="email" autocomplete="email" required placeholder="you@example.com"><button type="submit" class="pay-button">Получить ссылку</button></form><p id="auth-message" class="auth-message" role="status" aria-live="polite"></p></div></dialog>
 </body>
 </html>
